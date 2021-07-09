@@ -106,3 +106,9 @@ D:\web-ap\BigSchool\BigSchool\obj\Debug\BigSchool.csproj.CoreCompileInputs.cache
 D:\web-ap\BigSchool\BigSchool\obj\Debug\BigSchool.csproj.CopyComplete
 D:\web-ap\BigSchool\BigSchool\obj\Debug\BigSchool.dll
 D:\web-ap\BigSchool\BigSchool\obj\Debug\BigSchool.pdb
+D:\web-ap\BigSchool\BigSchool\bin\System.Net.Http.Formatting.dll
+D:\web-ap\BigSchool\BigSchool\bin\System.Web.Http.dll
+D:\web-ap\BigSchool\BigSchool\bin\System.Web.Http.WebHost.dll
+D:\web-ap\BigSchool\BigSchool\bin\System.Net.Http.Formatting.xml
+D:\web-ap\BigSchool\BigSchool\bin\System.Web.Http.xml
+D:\web-ap\BigSchool\BigSchool\bin\System.Web.Http.WebHost.xml

@@ -18,7 +18,7 @@ namespace BigSchool.Controllers
             foreach(Course i in upcommingCourse)
             {
                 ApplicationUser user = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(i.LecturerId);
-                i.Category.Name = user.Name;
+                i.Name = user.Name;
             }
             return View(upcommingCourse);
         }
