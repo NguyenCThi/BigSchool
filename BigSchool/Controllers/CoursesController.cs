@@ -3,6 +3,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -68,6 +70,37 @@ namespace BigSchool.Controllers
                 i.LectureName = currentUser.Name;
             }
             return View(courses);
+        }
+        public ActionResult Edit(int id)
+        {
+            BigSchoolContext db = new BigSchoolContext();
+            return View(db.Courses.Where(c=>c.Id==id).FirstOrDefault());
+        }
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, Course c)
+        {
+            BigSchoolContext db = new BigSchoolContext();
+            db.Entry(c).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Mine", "Courses");
+        }
+        public ActionResult Delete(int id)
+        {
+            BigSchoolContext db = new BigSchoolContext();
+            return View(db.Courses.Where(c => c.Id == id).FirstOrDefault());
+        }
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(int id, Course course)
+        {
+            BigSchoolContext db = new BigSchoolContext();
+            course = db.Courses.FirstOrDefault(c => c.Id == id);
+            db.Courses.Remove(course);
+            db.SaveChanges();
+            return RedirectToAction("Mine", "Courses");
         }
     }
 }
