@@ -1,4 +1,4 @@
-﻿/*body {
+﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
     
@@ -22,7 +22,7 @@ textarea {
 
 Set width on the form input elements since they're 100% wide by default
 input,
-select,*/
+select,
 
 .navbar-inverse {
     background-color: #d41d50;
@@ -68,4 +68,17 @@ select,*/
 }
 .course > li:hover .action{
     display:block;
+}
+ul, ol {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 20px;
 }
